@@ -11,12 +11,12 @@
 		<meta name="copyright" content="" />
 		
 		<meta name="robots" content="INDEX,FOLLOW" />
-		<link rel="canonical" href="#" />
+		<link rel="canonical" href="" />
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-		<link rel="icon" href="#" />
+		<link rel="icon" href="" />
 		<link href="//fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet" type="text/css" />
-
+		
 		<link href="assets/css/mui.min.css" rel="stylesheet" />
 		<link href="assets/css/font-awesome.min.css" rel="stylesheet" />
 		<link href="assets/css/style.css" rel="stylesheet" />
@@ -25,7 +25,7 @@
 		<script src="assets/js/script.js" type="text/javascript"></script>
 	</head>
 	
-	<body>
+	<body class="modal-open">
 		
 		<div id="header">
 			<div class="mui-container">
@@ -38,25 +38,9 @@
 						</ul>
 					</div>
 					<div class="mui-col-md-5 mui-col-sm-5 mui-col-xs-5 has-top-right-links">
-						<ul id="artist-nav" class="nav top-nav">
-							<li><a href="#" data-toggle="modal" data-target="#create-campaign"><i class="fa fa-plus"></i> Create Campaign</a></li>
-							<li class="notif has-sub-menu">
-								<a href="#"></a>
-								<ul class="sub-menu list-style">
-									<li><a href="#">200 people want to see you in Kiruna</a></li>
-									<li><a href="#">Your campaign is 80% towards its goal</a></li>
-									<li><a href="#">Cool_Kille_83 just followed you</a></li>
-								</ul>
-							</li>
-							<li class="account"><a href="#" style="background-image: url(web-images/feat-card-1.jpg)"></a></li>
-							<li class="menu has-sub-menu">
-								<a href="#"></a>
-								<ul class="sub-menu account-sub-menu">
-									<li class="active"><a href="#">My Campaigns</a></li>
-									<li><a href="#">Edit Profile</a></li>
-									<li><a href="#">Sign Out</a></li>
-								</ul>
-							</li>
+						<ul id="top-right-links" class="nav">
+							<li><a href="javascript: void(0)" data-toggle="modal" data-target="#login-modal">Log in</a></li>
+							<li class="buttoned"><a href="javascript: void(0)" data-toggle="modal" data-target="#signup-role-select">Sign up</a></li>
 						</ul>
 					</div>
 				</div>
@@ -65,60 +49,19 @@
 		
 		<div id="content">
 			
-			<div id="artist-banner" style="background-image: url(web-images/artist-banner-1.jpg)">
-				<div class="mui-container">
-					<div class="mui-row">
-						<div class="mui-col-md-12">
-							<div class="artist-picture" style="background-image: url(web-images/feat-card-1.jpg)"></div>
-							<h1>Clare Cunningham</h1>
-							<div class="location">Stockholm | Sweden</div>
-							<div class="genre">Rock</div>
-							<div class="follow-request">
-								<a href="#">+ Follow</a>&nbsp; |&nbsp;
-								<a href="#">+ Request this artist</a>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			
-			<div id="artist-details">
-				<div class="mui-container">
-					<div class="mui-row">
-						<div class="mui-col-md-12">
-							<h3>
-								<a href="#" class="active">Overview</a>
-								<a href="#">Shows</a>
-							</h3>
-						</div>
-					</div>
-					<div class="mui-row details-spotify">
-						<div class="mui-col-md-12 mui-col-lg-8">
-							<h2>Clare Cunningham</h2>
-							<p>Dubbed as having a vocal register similar to Adele (GAFFA) and for having a ‘Powerful and killer voice’ from Lzzy Hale (Halestorm) and ‘Phil Campbell (Motörhead) it’s no wonder Clare Cunningham is making waves across the world with her music. Storytelling with unwavering honesty is what Cunningham is best at, and this little country rock/pop chick has proven she is a multi versatile recording and live artist, singing across many genres.</p>
-							<ul class="artist-social-links">
-								<li><a href="#"><i class="fa fa-twitter"></i> @clarecoffical</a></li>
-								<li><a href="#"><i class="fa fa-facebook"></i> clarecoffical</a></li>
-								<li><a href="#"><i class="fa fa-instagram"></i> @clarecoffical</a></li>
-							</ul>
-							<div class="youtube-container">
-								<iframe width="560" height="315" src="https://www.youtube.com/embed/-1uGdOHMXiI?rel=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-							</div>
-						</div>
-						<div class="mui-col-md-12 mui-col-lg-4 spotify-container">
-							<iframe src="https://open.spotify.com/embed/user/ozze/playlist/3dxUfHVBNwwyNbsaTMYmPb" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
-						</div>
+			<div class="carousel-wrapper">
+				<div class="carousel-item" style="background-image: url('web-images/hero-carousel-1.jpg')">
+					<div class="carousel-caption">
+						<h1>This Band That We Love</h1>
 					</div>
 				</div>
 			</div>
 
-			<div class="mui-container artist-campaigns-container">
+			<div class="mui-container home-campaigns-container">
 				<div class="mui-row">
 					<div class="mui-col-lg-12">
-						<h2 class="standout-heading">Campaigns</h2>
-					</div>
-					<div class="mui-col-md-12 mui-col-lg-7">
-						<div class="tiled-campaigns-wrap featured">
+						
+						<div class="tiled-campaigns-wrap">
 							<div class="tiled-campaigns">
 								<div class="col col-1">
 									<a href="#" class="card" style="background-image: url('web-images/feat-card-1.jpg')">
@@ -138,12 +81,6 @@
 										<span class="caption">Quisque dui</span>
 									</a>
 								</div>
-							</div>
-						</div>
-					</div>
-					<div class="mui-col-md-12 mui-col-lg-5">
-						<div class="tiled-campaigns-wrap">
-							<div class="tiled-campaigns">
 								<div class="col col-2">
 									<a href="#" class="card" style="background-image: url('web-images/feat-card-2.jpg')">
 										<span class="funded"><strong>100%</strong>Funded</span>
@@ -178,45 +115,79 @@
 										<span class="caption">Fusce sodales</span>
 									</a>
 								</div>
+								<div class="col col-3">
+									<a href="#" class="card" style="background-image: url('web-images/feat-card-3.jpg')">
+										<span class="caption">Aliquam imperdiet</span>
+									</a>
+									<a href="#" class="card" style="background-image: url('web-images/feat-card-3.jpg')">
+										<span class="caption">Nunc hendrerit sem</span>
+									</a>
+									<a href="#" class="card" style="background-image: url('web-images/feat-card-3.jpg')">
+										<span class="caption">Vitae condimentum</span>
+									</a>
+									<a href="#" class="card" style="background-image: url('web-images/feat-card-3.jpg')">
+										<span class="caption">Sed fringilla</span>
+									</a>
+								</div>
 							</div>
 						</div>
+						
 					</div>
 				</div>
 			</div>
 
 			<div class="mui-container">
-				<div id="similar-artists" class="mui-row artists-list">
-					<div class="mui-col-lg-12">
-						<h3 class="artist-heading">Similar Artists.</h3>
-					</div>
-					<div class="mui-col-md-3 mui-col-sm-6 has-artists-items">
-						<a class="artist-item" href="#">
-							<span class="thumb" style="background-image: url(web-images/feat-card-3.jpg)"></span>
+				<div id="home-events" class="mui-row">
+					<div class="mui-col-lg-6 mui-col-md-12">
+						<a class="event" href="#">
+							<span class="thumb" style="background-image: url(web-images/feat-card-2.jpg)"></span>
 							<span class="title">Artist Name</span>
+							<span class="venue-date">
+								Venue Date<br />
+								<strong>150</strong> Price<br />
+								<strong>141</strong> Tickets Sold
+							</span>
+							<span class="reserved">80%</span>
+							<span class="reserve">Reserve Spot <object data="assets/images/arrow-right-green.svg" type="image/svg+xml"></object></span>
 						</a>
 					</div>
-					<div class="mui-col-md-3 mui-col-sm-6 has-artists-items">
-						<a class="artist-item" href="#">
+					<div class="mui-col-lg-6 mui-col-md-12">
+						<a class="event" href="#">
 							<span class="thumb" style="background-image: url(web-images/feat-card-3.jpg)"></span>
 							<span class="title">Artist Name</span>
+							<span class="venue-date">
+								Venue Date<br />
+								<strong>120</strong> Price<br />
+								<strong>155</strong> Tickets Sold
+							</span>
+							<span class="reserved">79%</span>
+							<span class="reserve">Reserve Spot <object data="assets/images/arrow-right-green.svg" type="image/svg+xml"></object></span>
 						</a>
 					</div>
-					<div class="mui-col-md-3 mui-col-sm-6 has-artists-items">
-						<a class="artist-item" href="#">
+					<div class="mui-col-lg-6 mui-col-md-12">
+						<a class="event" href="#">
 							<span class="thumb" style="background-image: url(web-images/feat-card-3.jpg)"></span>
 							<span class="title">Artist Name</span>
+							<span class="venue-date">
+								Venue Date<br />
+								<strong>190</strong> Price<br />
+								<strong>109</strong> Tickets Sold
+							</span>
+							<span class="reserved">54%</span>
+							<span class="reserve">Reserve Spot <object data="assets/images/arrow-right-green.svg" type="image/svg+xml"></object></span>
 						</a>
 					</div>
-					<div class="mui-col-md-3 mui-col-sm-6 has-artists-items">
-						<a class="artist-item" href="#">
-							<span class="thumb" style="background-image: url(web-images/feat-card-3.jpg)"></span>
+					<div class="mui-col-lg-6 mui-col-md-12">
+						<a class="event" href="#">
+							<span class="thumb" style="background-image: url(web-images/feat-card-2.jpg)"></span>
 							<span class="title">Artist Name</span>
-						</a>
-					</div>
-					<div class="mui-col-md-3 mui-col-sm-6 has-artists-items">
-						<a class="artist-item" href="#">
-							<span class="thumb" style="background-image: url(web-images/feat-card-3.jpg)"></span>
-							<span class="title">Artist Name</span>
+							<span class="venue-date">
+								Venue Date<br />
+								<strong>99</strong> Price<br />
+								<strong>252</strong> Tickets Sold
+							</span>
+							<span class="reserved">98%</span>
+							<span class="reserve">Reserve Spot <object data="assets/images/arrow-right-green.svg" type="image/svg+xml"></object></span>
 						</a>
 					</div>
 				</div>
@@ -227,6 +198,44 @@
 		<div id="footer">
 		
 		</div>
+		
+		<div class="modal-backdrop fade in"></div>
+		<div id="login-modal" class="modal fade in form-modal" tabindex="-1" role="dialog" style="display: block">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-body">
+						<div class="mui-container-fluid">
+							<div class="mui-row">
+								<div class="mui-col-md-12">
+									<span class="logo-venue"></span>
+									<h4>Log in</h4>
+									<h5>Log in with Email address</h5>
+								</div>
+							</div>
+							<div class="mui-row">
+								<div class="mui-col-md-6 mui-col-md-offset-3">
+									<div class="form-group">
+										<label class="control-label">Email address</label>
+										<input type="email" class="form-control" />
+									</div>
+									<div class="form-group">
+										<label class="control-label">Password</label>
+										<input type="password" class="form-control" />
+									</div>
+									<div class="form-group">
+										<button type="button" class="form-submit" data-nextformstep="2">Sign up</button>
+									</div>
+									<div class="social-login-buttons">
+										<a href="#" class="facebook">Sign in with Facebook</a>
+										<a href="#" class="google">Sign in with Google</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div><!-- /.modal-content -->
+			</div><!-- /.modal-dialog -->
+		</div><!-- /.modal -->
 		
 	</body>
 </html>

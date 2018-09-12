@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html lang="en"> <!--<![endif]-->
+	<head>
+		<title>Venue</title>
+		
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<meta name="copyright" content="" />
+		
+		<meta name="robots" content="INDEX,FOLLOW" />
+		<link rel="canonical" href="#" />
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+		<link rel="icon" href="#" />
+		<link href="//fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet" type="text/css" />
+
+		<link href="assets/css/mui.min.css" rel="stylesheet" />
+		<link href="assets/css/font-awesome.min.css" rel="stylesheet" />
+		<link href="assets/css/style.css" rel="stylesheet" />
+		
+		<script src="assets/js/mui.min.js" type="text/javascript"></script>
+		<script src="assets/js/script.js" type="text/javascript"></script>
+	</head>
+	
+	<body class="modal-open">
+		
+		<div id="header">
+			<div class="mui-container">
+				<div class="mui-row">
+					<div class="mui-col-md-7 mui-col-sm-7 mui-col-xs-7">
+						<a id="logo" class="logo-venue" href="#"></a>
+						<ul id="main-nav" class="nav top-nav">
+							<li><a href="artist-campaign.html">Campaigns</a></li>
+							<li><a href="artist-profile.html">Artists</a></li>
+						</ul>
+					</div>
+					<div class="mui-col-md-5 mui-col-sm-5 mui-col-xs-5 has-top-right-links">
+						<ul id="artist-nav" class="nav top-nav">
+							<li><a href="#" data-toggle="modal" data-target="#create-campaign"><i class="fa fa-plus"></i> Create Campaign</a></li>
+							<li class="notif has-sub-menu">
+								<a href="#"></a>
+								<ul class="sub-menu list-style">
+									<li><a href="#">200 people want to see you in Kiruna</a></li>
+									<li><a href="#">Your campaign is 80% towards its goal</a></li>
+									<li><a href="#">Cool_Kille_83 just followed you</a></li>
+								</ul>
+							</li>
+							<li class="account"><a href="#" style="background-image: url(web-images/feat-card-1.jpg)"></a></li>
+							<li class="menu has-sub-menu">
+								<a href="#"></a>
+								<ul class="sub-menu account-sub-menu">
+									<li class="active"><a href="#">My Campaigns</a></li>
+									<li><a href="#">Edit Profile</a></li>
+									<li><a href="#">Sign Out</a></li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<div id="content">
+			
+			<div class="mui-container">
+				<div class="mui-row campaign-details" id="artist-campaign">
+					<div class="mui-col-md-12 mui-col-lg-6 has-campaign-picture">
+						<div class="campaign-picture">
+							<img src="web-images/feat-card-1.jpg" />
+						</div>
+					</div>
+					<div class="mui-col-md-12 mui-col-lg-6 has-campaign-details">
+						<h2>Clare Cunningham</h2>
+						<div class="mui-row has-location-genre-visit-profile">
+							<div class="mui-col-xs-6">
+								<div class="location-genre">
+									<div class="location">Stockholm</div>
+									<div class="genre">Rock</div>
+								</div>
+							</div>
+							<div class="mui-col-xs-6">
+								<a href="artist-profile.html" class="visit-profile">Visit Profile</a>
+							</div>
+						</div>
+						<div class="campaign-description">
+							<p>Dubbed as having a vocal register similar to Adele (GAFFA) and for having a ‘Powerful and killer voice’ from Lzzy Hale (Halestorm) and Phil Campbell (Motörhead) it’s no wonder Clare Cunningham is making waves across the world with her music. Storytelling with unwavering honesty is what Cunningham is best at, and this little country rock/pop chick has proven she is a multi versatile recording and live artist, singing across many genres.</p>
+						</div>
+						<div class="mui-row">
+							<div class="mui-col-xs-6">
+								<div class="campaign-date">
+									<div class="icon-label">
+										<object data="assets/images/icon-calendar.svg" type="image/svg+xml"></object>
+										<div class="label">Date</div>
+									</div>
+									<div class="date">16 May 2018</div>
+								</div>
+							</div>
+							<div class="mui-col-xs-6">
+								<div class="campaign-date">
+									<div class="icon-label">
+										<object data="assets/images/icon-bell.svg" type="image/svg+xml"></object>
+										<div class="label">Days to go</div>
+									</div>
+									<div class="date">30 Days left</div>
+								</div>
+							</div>
+						</div>
+						<div class="mui-row tickets-by-price">
+							<input type="radio" name="artcamp_tick" id="artcamp_tick_01" value="150 SEK" checked="" />
+							<label class="mui-col-xs-4 ticket" for="artcamp_tick_01">
+								<span class="title">Gigstarter</span>
+								<span class="status">24/50</span>
+								<span class="price">150 SEK</span>
+							</label>
+							<input type="radio" name="artcamp_tick" id="artcamp_tick_02" value="300 SEK" />
+							<label class="mui-col-xs-4 ticket" for="artcamp_tick_02">
+								<span class="title">Gamechanger</span>
+								<span class="status">0/100</span>
+								<span class="price">300 SEK</span>
+							</label>
+							<input type="radio" name="artcamp_tick" id="artcamp_tick_03" value="500 SEK" />
+							<label class="mui-col-xs-4 ticket" for="artcamp_tick_03">
+								<span class="title">Sure Thing</span>
+								<span class="status">0/300</span>
+								<span class="price">500 SEK</span>
+							</label>
+						</div>
+						<div class="mui-row">
+							<div class="mui-col-md-12">
+								<a href="#" class="campaign-book-a-ticket" data-toggle="modal" data-target="#purchase-ticket">Book A <object data="assets/images/arrow-right-green.svg" type="image/svg+xml"></object></a>
+							</div>
+						</div>
+						<div class="mui-row">
+							<div class="mui-col-md-12">
+								<div class="share-campaign">
+									<label>Share:</label>
+									<ul>
+										<li><a href="#"><i class="fa fa-facebook"></i></a></li>
+										<li><a href="#"><i class="fa fa-twitter"></i></a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</div><!-- / #content -->
+		
+		<div id="footer">
+		
+		</div>
+		
+		<div class="modal-backdrop fade in"></div>
+		<div id="create-campaign" class="modal fade in form-modal" tabindex="-1" role="dialog" style="display: block">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-body">
+						<div class="mui-container-fluid">
+							<div class="mui-row">
+								<div class="mui-col-md-12">
+									<h2>Create new campaign</h2>
+									<ul class="nav nav-tabs" role="tablist">
+										<li role="presentation" class="active"><a href="#campaign-details" aria-controls="campaign-details" role="tab" data-toggle="tab">Campaign Details</a></li>
+										<li role="presentation"><a href="#review-launch" aria-controls="review-launch" role="tab" data-toggle="tab">Review and Launch</a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class="mui-container-fluid tab-content">
+							<div role="tabpanel" class="mui-row tab-pane fade in active" id="campaign-details">
+								<div class="mui-col-md-6">
+									<div class="form-group">
+										<label class="control-label">What’s the name of your Campaign?</label>
+										<input type="text" class="form-control" placeholder="Campaign Title (Artist Name)" />
+									</div>
+									<div class="form-group">
+										<label class="control-label">What’s your campaign for?</label>
+										<textarea class="form-control campaign-description" placeholder="Campaign Description"></textarea>
+									</div>
+									<div class="form-group">
+										<label class="control-label">How long will your campaign run for? </label>
+										<input type="number" class="form-control" placeholder="120 days maximum" min="1" max="120" />
+									</div>
+								</div>
+								<div class="mui-col-md-6">
+									<div class="form-group">
+										<label class="control-label">What’s your campaign goal?</label>
+										<input type="text" class="form-control" placeholder="Enter campaign goal" />
+									</div>
+									<div class="form-group">
+										<label class="control-label">Ticket price</label>
+										<div class="mui-row">
+											<div class="mui-col-md-6">
+												<div class="form-checkbox boxed">
+													<input type="checkbox" id="tktprc-01" />
+													<label for="tktprc-01">Gigstarter</label>
+												</div>
+											</div>
+											<div class="mui-col-md-6">
+												<div class="form-checkbox boxed">
+													<input type="checkbox" id="tktprc-02" />
+													<label for="tktprc-02">Gamechanger</label>
+												</div>
+											</div>
+											<div class="mui-col-md-6">
+												<div class="form-checkbox boxed">
+													<input type="checkbox" id="tktprc-03" />
+													<label for="tktprc-03">Sure Thing</label>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="form-group">
+										<label class="control-label">Add a city</label>
+										<input type="text" class="form-control" placeholder="Enter a city" />
+									</div>
+									<div class="form-group">
+										<label class="control-label">Suggest a date for the venue</label>
+										<input type="text" class="form-control" placeholder="Click to pick a date" />
+									</div>
+								</div>
+								<div class="mui-col-md-12">
+									<div class="form-group">
+										<label class="control-label">Upload a campaign picture</label>
+										<div class="upload"><object data="assets/images/arrow-right.svg" type="image/svg+xml"></object> Drop your files here or click to upload</div>
+									</div>
+								</div>
+							</div>
+							<div role="tabpanel" class="mui-row tab-pane fade campaign-details" id="review-launch">
+								<div class="mui-col-md-6">
+									<div class="campaign-picture">
+										<img src="web-images/feat-card-1.jpg" />
+									</div>
+								</div>
+								<div class="mui-col-md-6">
+									<h2>Clare Cunningham</h2>
+									<div class="location-genre">
+										<div class="location">Stockholm</div>
+										<div class="genre">Rock</div>
+									</div>
+									<div class="campaign-description">
+										<p>Dubbed as having a vocal register similar to Adele (GAFFA) and for having a ‘Powerful and killer voice’ from Lzzy Hale (Halestorm) and Phil Campbell (Motörhead) it’s no wonder Clare Cunningham is making waves across the world with her music. Storytelling with unwavering honesty is what Cunningham is best at, and this little country rock/pop chick has proven she is a multi versatile recording and live artist, singing across many genres.</p>
+									</div>
+									<div class="mui-row">
+										<div class="mui-col-md-6">
+											<div class="campaign-date">
+												<div class="icon-label">
+													<object data="assets/images/icon-calendar.svg" type="image/svg+xml"></object>
+													<div class="label">Date</div>
+												</div>
+												<div class="date">16 May 2018</div>
+											</div>
+										</div>
+										<div class="mui-col-md-6">
+											<div class="campaign-date">
+												<div class="icon-label">
+													<object data="assets/images/icon-bell.svg" type="image/svg+xml"></object>
+													<div class="label">Days to go</div>
+												</div>
+												<div class="date">30 Days left</div>
+											</div>
+										</div>
+									</div>
+									<div class="mui-row tickets-by-price">
+										<div class="mui-col-md-4 ticket">
+											<div class="title">Gigstarter</div>
+											<div class="status">24/50</div>
+											<div class="price">150 SEK</div>
+										</div>
+										<div class="mui-col-md-4 ticket">
+											<div class="title">Gamechanger</div>
+											<div class="status">0/100</div>
+											<div class="price">300 SEK</div>
+										</div>
+										<div class="mui-col-md-4 ticket">
+											<div class="title">Sure Thing</div>
+											<div class="status">0/300</div>
+											<div class="price">500 SEK</div>
+										</div>
+									</div>
+									<div class="mui-row">
+										<div class="mui-col-md-12">
+											<a href="#" class="campaign-book-a-ticket">Book A <object data="assets/images/arrow-right-green.svg" type="image/svg+xml"></object></a>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="mui-row">
+								<div class="mui-col-md-12">
+									<div class="form-group">
+										<button type="button" class="form-submit pull-right">Review and Launch</button>
+										<button type="button" class="form-submit pull-right mr20" data-toggle="modal" data-target="#create-campaign">Cancel</button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div><!-- /.modal-content -->
+			</div><!-- /.modal-dialog -->
+		</div><!-- /.modal -->
+		
+	</body>
+</html>

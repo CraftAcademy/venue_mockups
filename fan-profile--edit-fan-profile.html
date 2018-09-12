@@ -25,7 +25,7 @@
 		<script src="assets/js/script.js" type="text/javascript"></script>
 	</head>
 	
-	<body>
+	<body class="modal-open">
 		
 		<div id="header">
 			<div class="mui-container">
@@ -39,7 +39,7 @@
 					</div>
 					<div class="mui-col-md-5 mui-col-sm-5 mui-col-xs-5 has-top-right-links">
 						<ul id="artist-nav" class="nav top-nav">
-							<li><a href="#" data-toggle="modal" data-target="#create-campaign"><i class="fa fa-plus"></i> Create Campaign</a></li>
+							<li><a href="#" data-toggle="modal" data-target="#edit-fan-profile">Edit Profile</a></li>
 							<li class="notif has-sub-menu">
 								<a href="#"></a>
 								<ul class="sub-menu list-style">
@@ -52,7 +52,7 @@
 							<li class="menu has-sub-menu">
 								<a href="#"></a>
 								<ul class="sub-menu account-sub-menu">
-									<li class="active"><a href="#">My Campaigns</a></li>
+									<li class="active"><a href="#" data-toggle="modal" data-target="#fan-profile-my-tickets">My Tickets</a></li>
 									<li><a href="#">Edit Profile</a></li>
 									<li><a href="#">Sign Out</a></li>
 								</ul>
@@ -227,6 +227,52 @@
 		<div id="footer">
 		
 		</div>
+		
+		<div class="modal-backdrop fade in"></div>
+		<div id="edit-fan-profile" class="modal fade in form-modal" tabindex="-1" role="dialog" style="display: block">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-body">
+						<div class="mui-container-fluid">
+							<div class="mui-row">
+								<div class="mui-col-md-12">
+									<span class="logo-venue"></span>
+									<h4>Edit Profile</h4>
+								</div>
+							</div>
+							<div class="mui-row">
+								<div class="mui-col-md-8 mui-col-md-offset-2">
+									<div class="form-group">
+										<label class="control-label">Full Name</label>
+										<input type="text" class="form-control" value="Lars Gadeby" />
+									</div>
+									<div class="form-group">
+										<label class="control-label">E-mail</label>
+										<input type="email" class="form-control" value="lars@whatwedo.se" />
+									</div>
+									<div class="form-group">
+										<label class="control-label">City</label>
+										<input type="text" class="form-control" value="Stockholm" />
+									</div>
+									<div class="form-group">
+										<label class="control-label">Phone</label>
+										<input type="text" class="form-control" value="073 51 27 53" />
+									</div>
+									<div class="form-group">
+										<label class="control-label">Upload your profile picture</label>
+										<div class="upload"><object data="assets/images/arrow-right.svg" type="image/svg+xml"></object> Drop your files here or click to upload</div>
+									</div>
+									<div class="form-group text-right">
+										<button type="button" class="form-submit" data-dismiss="modal">Cancel</button>
+										<button type="button" class="form-submit">Update</button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div><!-- /.modal-content -->
+			</div><!-- /.modal-dialog -->
+		</div><!-- /.modal -->
 		
 	</body>
 </html>

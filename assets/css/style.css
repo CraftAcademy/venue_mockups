@@ -24,6 +24,10 @@ a:hover { color: inherit; text-decoration: none }
 .pb0 { padding-bottom: 0 !important }
 .pt0 { padding-top: 0 !important }
 
+.text-left { text-align: left }
+.text-center { text-align: center }
+.text-right { text-align: right }
+
 ul { margin: 0; padding: 0 }
 ul li { list-style: outside none }
 .nav > li > a { display: block; padding: 0 }
@@ -33,10 +37,10 @@ ul li { list-style: outside none }
 ul.nav { }
 ul.nav li { display: inline-block }
 
-.btn { border-radius: 50px }
+.btn { border-radius: 50px; padding: 5px 0 }
 .btn-venue { background: transparent none; border: 1px solid rgb(240,215,93) }
 .btn-venue:hover { color: #FFF }
-.btn-danger { background: rgb(242,78,93); background: -moz-linear-gradient(top,  rgba(242,78,93,1) 0%, rgba(163,7,30,1) 100%); background: -webkit-linear-gradient(top,  rgba(242,78,93,1) 0%,rgba(163,7,30,1) 100%); background: linear-gradient(to bottom,  rgba(242,78,93,1) 0%,rgba(163,7,30,1) 100%); filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f24e5d', endColorstr='#a3071e',GradientType=0 ) }
+.btn-danger { background: rgb(242,78,93); background: -moz-linear-gradient(top,  rgba(242,78,93,1) 0%, rgba(163,7,30,1) 100%); background: -webkit-linear-gradient(top,  rgba(242,78,93,1) 0%,rgba(163,7,30,1) 100%); background: linear-gradient(to bottom,  rgba(242,78,93,1) 0%,rgba(163,7,30,1) 100%); filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f24e5d', endColorstr='#a3071e',GradientType=0 ); border: 1px solid rgb(155,0,0) }
 
 img.faux { display: none !important }
 
@@ -68,13 +72,29 @@ img.faux { display: none !important }
 	.mui-container { max-width: 1170px }
 }
 
-/* 1.1 Forms */
+/* 1.1 Tabs */
+.nav { list-style: none; margin-bottom: 0; padding-left: 0 }
+.nav > li { display: block; position: relative }
+.nav-tabs > li { float: left; margin-bottom: -1px }
+ul.nav li { display: inline-block }
+.nav > li > a { display: block; padding: 10px 15px; position: relative }
+.nav-tabs > li > a { border: 1px solid transparent; border-radius: 4px 4px 0 0; line-height: 1.42857143; margin-right: 2px }
+.nav > li > a { padding: 0 }
+.nav-tabs > li.active > a, .nav-tabs > li.active > a:focus, .nav-tabs > li.active > a:hover { background-color: #fff; border: 1px solid #ddd; cursor: default; color: #555 }
 
+.fade { opacity: 0; -webkit-transition: opacity .15s linear; -o-transition: opacity .15s linear; transition: opacity .15s linear }
+.fade.in { opacity: 1 }
+.tab-content > .tab-pane { display: none }
+.tab-content > .active { display: block }
+
+/* 1.2 Forms */
+
+button, input, optgroup, select, textarea { color: inherit; font: inherit }
 .form-group,
 .mui-textfield { margin-bottom: 15px; padding-top: 0 }
-.form-group + .form-group {}
-.form-group .control-label { font-size: 16px; font-weight: normal }
+.form-group .control-label { display: inline-block; font-size: 16px; font-weight: normal; margin-bottom: 5px; max-width: 100% }
 .form-group .control-label .fa { color: rgb(240,215,93); font-size: 18px; margin-right: 4px; vertical-align: middle }
+.form-control { display: block; font-size: 14px; line-height: 1.42857143; width: 100%; -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075); box-shadow: inset 0 1px 1px rgba(0,0,0,.075); -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s; -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s; transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s }
 .form-group .upload,
 .form-group .form-control,
 .mui-textfield > input { background-color: #3C3D44; border: 0 none; /*border-color: #1E1E22; border-width: 3px 0 0; border-style: solid;*/ border-radius: 0; color: #FFF; height: 40px; padding: 8px 12px }
@@ -83,6 +103,7 @@ img.faux { display: none !important }
 .form-group textarea.form-control { height: 123px }
 .form-group textarea.form-control.taller { height: 145px }
 .form-group .upload { color: rgba(255,255,255,0.5); font-size: 12px; font-style: italic; height: auto; padding: 25px 12px; text-align: center }
+.form-group .upload object,
 .form-group .upload svg { display: table; height: 16px; margin: 0 auto 8px; width: 16px; -moz-transform: rotate(-90deg); -webkit-transform: rotate(-90deg); transform: rotate(-90deg) }
 .form-group .upload svg polygon { fill: rgb(240,215,93) }
 .form-group .form-submit { background-color: transparent; border: 1px solid rgb(240,215,93); border-radius: 50px; display: table; font-size: 13px; font-weight: bold; margin: 30px auto 0; padding: 5px 30px }
@@ -91,8 +112,10 @@ img.faux { display: none !important }
 .form-group .form-checkbox input[type="checkbox"] + label { cursor: pointer; display: inline-block; margin: 0; padding-left: 26px }
 .form-group .form-checkbox input[type="checkbox"] + label::before { background: #3c3d44; content: ''; display: block; height: 16px; left: 0px; position: absolute; top: 2px; width: 16px }
 .form-group .form-checkbox input[type="checkbox"]:checked + label::before { box-shadow: 0 0 2px rgb(240,215,93) inset }
+.form-group .form-checkbox input[type="checkbox"] + label object,
 .form-group .form-checkbox input[type="checkbox"] + label svg { display: none; height: 20px; left: 1px; position: absolute; top: -3px; width: 20px }
 .form-group .form-checkbox input[type="checkbox"] + label svg path { fill: rgb(240,215,93) }
+.form-group .form-checkbox input[type="checkbox"]:checked + label object,
 .form-group .form-checkbox input[type="checkbox"]:checked + label svg { display: block; position: absolute }
 .form-group .form-checkbox a { color: rgb(240,215,93) }
 .form-group .form-checkbox.boxed { font-size: inherit; margin: 0; width: 100% }
@@ -149,7 +172,10 @@ img.faux { display: none !important }
 .selectize-control.single .selectize-input.dropdown-active::after { margin: 0; -moz-transform: rotate(-90deg) translateX(50%); -webkit-transform: rotate(-90deg) translateX(50%); transform: rotate(-90deg) translateX(50%) }
 .mui-dropdown .mui-caret { -moz-transform: rotate(90deg) translate(0, -20px); -webkit-transform: rotate(90deg) translate(0, -20px); transform: rotate(90deg) translate(0, -20px) }
 
-/* 1.2 Modals */
+/* 1.3 Modals */
+
+body.modal-open { overflow: hidden }
+.modal{position:fixed;top:0;right:0;bottom:0;left:0;z-index:1050;display:none;overflow:hidden;-webkit-overflow-scrolling:touch;outline:0}.modal.fade .modal-dialog{-webkit-transition:-webkit-transform .3s ease-out;-o-transition:-o-transform .3s ease-out;transition:transform .3s ease-out;-webkit-transform:translate(0,-25%);-ms-transform:translate(0,-25%);-o-transform:translate(0,-25%);transform:translate(0,-25%)}.modal.in .modal-dialog{-webkit-transform:translate(0,0);-ms-transform:translate(0,0);-o-transform:translate(0,0);transform:translate(0,0)}.modal-open .modal{overflow-x:hidden;overflow-y:auto}.modal-dialog{position:relative;width:auto;margin:10px}.modal-content{position:relative;background-color:#fff;-webkit-background-clip:padding-box;background-clip:padding-box;border:1px solid #999;border:1px solid rgba(0,0,0,.2);border-radius:6px;outline:0;-webkit-box-shadow:0 3px 9px rgba(0,0,0,.5);box-shadow:0 3px 9px rgba(0,0,0,.5)}.modal-backdrop{position:fixed;top:0;right:0;bottom:0;left:0;z-index:1040;background-color:#000}.modal-backdrop.fade{filter:alpha(opacity=0);opacity:0}.modal-backdrop.in{filter:alpha(opacity=50);opacity:.5}.modal-header{padding:15px;border-bottom:1px solid #e5e5e5}.modal-header .close{margin-top:-2px}.modal-title{margin:0;line-height:1.42857143}.modal-body{position:relative;padding:15px}.modal-footer{padding:15px;text-align:right;border-top:1px solid #e5e5e5}.modal-footer .btn+.btn{margin-bottom:0;margin-left:5px}.modal-footer .btn-group .btn+.btn{margin-left:-1px}.modal-footer .btn-block+.btn-block{margin-left:0}.modal-scrollbar-measure{position:absolute;top:-9999px;width:50px;height:50px;overflow:scroll}@media (min-width:768px){.modal-dialog{width:600px;margin:30px auto}.modal-content{-webkit-box-shadow:0 5px 15px rgba(0,0,0,.5);box-shadow:0 5px 15px rgba(0,0,0,.5)}.modal-sm{width:300px}}@media (min-width:992px){.modal-lg{width:900px}}
 
 .modal-backdrop.in { background-color: rgb(34,32,32); opacity: 0.85 }
 .modal .modal-content { background-color: rgb(43,42,46) }
@@ -303,7 +329,9 @@ body.show-device-menu #header #device-menu { -moz-transform: translateY(0); -web
 .tiled-campaigns .card .details .stats { flex-grow: 1 }
 .tiled-campaigns .card .details .stats .stat { display: inline-block; }
 .tiled-campaigns .card .details .stats .stat + .stat { margin-left: 2% }
+.tiled-campaigns .card .details .reserve object,
 .tiled-campaigns .card .details .reserve svg { display: inline-block; height: 16px; vertical-align: middle; width: 16px; -moz-transform: translate(20%, -8%); -webkit-transform: translate(20%, -8%); transform: translate(20%, -8%) }
+.tiled-campaigns > .col-1 .card .details .reserve object,
 .tiled-campaigns > .col-1 .card .details .reserve svg { height: 24px; width: 24px }
 .tiled-campaigns .card .details .reserve svg polygon { fill: #7ed321 }
 .tiled-campaigns .card .funded { display: block; font-size: 15px; line-height: 1.4em; position: absolute; right: 5%; text-align: right; top: 5% }
@@ -384,6 +412,7 @@ body.show-device-menu #header #device-menu { -moz-transform: translateY(0); -web
 #artist-banner { background: transparent none center center no-repeat; background-size: cover; padding-top: 36%; z-index: 1 }
 #artist-banner .mui-container { bottom: 0; left: 50%; position: absolute; width: 100%; -moz-transform: translateX(-50%); -webkit-transform: translateX(-50%); transform: translateX(-50%) }
 #artist-banner a.artist-bg-edit { display: block; position: absolute; right: 30px; top: 10px }
+#artist-banner a.artist-bg-edit object,
 #artist-banner a.artist-bg-edit svg { display: block; height: 30px; width: 30px }
 #artist-banner [class*="col-"] { padding-bottom: 25px; padding-left: 275px }
 #artist-banner .artist-picture { background: transparent none center center no-repeat; background-size: cover; border: 4px solid #FFF; border-radius: 50%; height: 250px; left: 0; position: absolute; top: 50%; width: 250px; -moz-transform: translateY(-50%); -webkit-transform: translateY(-50%); transform: translateY(-50%) }
@@ -398,6 +427,7 @@ body.show-device-menu #header #device-menu { -moz-transform: translateY(0); -web
 #artist-details .details-spotify { display: flex; margin-bottom: 100px; margin-top: 50px }
 #artist-details .details-spotify h2 { font-size: 32px; font-weight: 900; margin-bottom: 10px }
 #artist-details .details-spotify h2 .artist-title-edit { display: inline-block; margin-left: 10px; vertical-align: bottom }
+#artist-details .details-spotify h2 .artist-title-edit object,
 #artist-details .details-spotify h2 .artist-title-edit svg { display: block; height: 30px; width: 30px }
 #artist-details .details-spotify p { font-size: 16px }
 #artist-details .details-spotify ul.artist-social-links { margin: 20px 0 }
@@ -478,7 +508,7 @@ body.show-device-menu #header #device-menu { -moz-transform: translateY(0); -web
 #create-campaign ul.nav.nav-tabs li + li { margin-left: 10px }
 #create-campaign ul.nav.nav-tabs li a { border-color: transparent; border-width: 0 0 1px; font-size: 18px; margin: 0; opacity: 0.7; padding: 0 2px }
 #create-campaign ul.nav.nav-tabs li.active a { background: transparent none; border-bottom-color: rgb(240,215,93); color: rgb(240,215,93); opacity: 1 }
-#create-campaign .col-md-6:nth-child(3) .form-checkbox.boxed { margin-top: 30px }
+#create-campaign .mui-col-md-6:nth-child(3) .form-checkbox.boxed { margin-top: 26px }
 #create-campaign textarea.campaign-description { height: 192px }
 
 .campaign-details .campaign-picture {}
@@ -491,6 +521,7 @@ body.show-device-menu #header #device-menu { -moz-transform: translateY(0); -web
 .campaign-details .campaign-description p {}
 .campaign-details .campaign-date {}
 .campaign-details .campaign-date .icon-label {}
+.campaign-details .campaign-date .icon-label object,
 .campaign-details .campaign-date .icon-label svg { display: inline-block; height: 40px; margin-right: 15px; vertical-align: middle; width: 40px }
 .campaign-details .campaign-date .icon-label svg path,
 .campaign-details .campaign-date .icon-label svg circle { fill: #FFF }
@@ -506,6 +537,7 @@ body.show-device-menu #header #device-menu { -moz-transform: translateY(0); -web
 .campaign-details .tickets-by-price .ticket .status { padding: 30px 0 }
 .campaign-details .tickets-by-price .ticket .price { font-size: 35px; font-weight: bold }
 .campaign-details .campaign-book-a-ticket { display: table; font-size: 23px; margin: 20px auto 0 }
+.campaign-details .campaign-book-a-ticket object,
 .campaign-details .campaign-book-a-ticket svg { display: inline-block; height: 36px; margin-left: 10px; vertical-align: middle; width: 36px }
 .campaign-details .campaign-book-a-ticket svg polygon { fill: #7ed321 }
 @media all and (min-width:992px) and (max-width:1199px) {
@@ -542,6 +574,7 @@ body.show-device-menu #header #device-menu { -moz-transform: translateY(0); -web
 #purchase-ticket.modal .ticket-price-qty .price { font-size: 35px; font-weight: bold; margin-bottom: 30px }
 #purchase-ticket.modal .ticket-price-qty .qty .numerified { margin: 0 auto }
 #purchase-ticket.modal .purchase-footer { font-size: 20px; padding: 10px 0 }
+#purchase-ticket.modal .purchase-footer .purchase-continue-to-payment object,
 #purchase-ticket.modal .purchase-footer .purchase-continue-to-payment svg { display: inline-block; height: 30px; margin-left: 10px; vertical-align: middle; width: 30px; -moz-transform: translateY(-3px); -webkit-transform: translateY(-3px); transform: translateY(-3px) }
 #purchase-ticket.modal .purchase-footer .purchase-continue-to-payment svg polygon { fill: #7ed321 }
 #purchase-ticket.modal #purchase-ticket-payment h4 { color: rgb(240,215,93); font-size: 35px; margin: 0 0 40px; text-align: center }
@@ -559,6 +592,7 @@ body.show-device-menu #header #device-menu { -moz-transform: translateY(0); -web
 .item-listing .search-row { display: flex; margin: 20px 0 10px }
 .item-listing .search-row .form-group,
 .item-listing .search-row .mui-textfield { flex: 1; margin: 0 }
+.item-listing .search-row .form-submit object,
 .item-listing .search-row .form-submit svg { display: block; height: 40px; margin-left: 10px; width: 30px }
 .item-listing [class*="pre-"][class*="-items"] { padding-top: 70px }
 .item-listing .campaign-item { align-items: center; display: flex; justify-content: center }
@@ -574,6 +608,7 @@ body.show-device-menu #header #device-menu { -moz-transform: translateY(0); -web
 .item-listing .campaign-item .perc-reserve .perc { font-weight: bold; margin-bottom: 25px }
 .item-listing .campaign-item .perc-reserve .percentage { font-size: 50px; font-weight: bold }
 .item-listing .campaign-item .perc-reserve .a { }
+.item-listing .campaign-item .perc-reserve .a object,
 .item-listing .campaign-item .perc-reserve .a svg { display: inline-block; height: 24px; margin-left: 10px; vertical-align: middle; width: 24px; -moz-transform: translateY(-3px); -webkit-transform: translateY(-3px); transform: translateY(-3px) }
 .item-listing .campaign-item .perc-reserve .a svg polygon { fill: #7ed321 }
 @media all and (max-width:767px) {
